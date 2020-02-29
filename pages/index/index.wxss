@@ -1,0 +1,60 @@
+/**index.wxss**/
+page{
+  background-color: wheat;
+}
+/*标题*/
+.title{
+  font-size: 50rpx;
+}
+/*表单*/
+form{
+  margin: 160rpx 0;
+}
+input{
+  background-color: white;
+  padding: 20rpx 30rpx;
+  margin: 20rpx 25rpx;
+  width: 623rpx;
+}
+
+button{
+  width: 683rpx;
+  border: none;
+  border-radius: 0;
+  margin-top: 20rpx;
+}
+button::after{
+  border: none;
+  border-radius: 0;
+}
+textarea{
+  height: 200rpx;
+}
+.author{
+  position: absolute;
+  bottom: 60rpx;
+  color:green;
+  font-family: 楷体;
+}
+.bottom{
+  position: absolute;
+  bottom: 60rpx;
+  color:green;
+}
+/*标签*/
+.authorBy{
+  float: right;
+  color: red;
+  font-size: 34rpx;
+  font-family: 楷体;
+  margin-right: 40rpx;
+  margin-top: 50rpx; 
+}
+.notice{
+  font-size: 30rpx;
+  text-align: center;
+  margin: 50rpx 0;
+}
+swiper{
+  height: 40rpx;
+}

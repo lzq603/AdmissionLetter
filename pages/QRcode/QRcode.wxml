@@ -1,0 +1,10 @@
+<!--pages/QRcode/QRcode.wxml-->
+<view>
+  <view style='text-align:center;margin:20rpx 0;'>扫描二维码了解更多信息</view>
+  <view style='text-align:center;'>
+    <image id='QR' src='{{image}}' mode='aspectFit' data-image='{{image}}' bindtap='preview'></image>
+  </view>
+  <view class='friend'>
+    <view>{{text}}</view>
+  </view>
+</view>

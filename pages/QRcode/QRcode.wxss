@@ -1,0 +1,8 @@
+/* pages/QRcode/QRcode.wxss */
+.QR{
+  width: 500rpx;
+}
+.friend{
+  text-align: center;
+  padding: 40rpx;
+}

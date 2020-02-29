@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='title'>石头查询</view>
+  <form bindsubmit='submit'>
+    <swiper class='notice' interval='3000' circular='true' autoplay='true' style='color:{{notices[0].color}}' vertical='true'>
+      <swiper-item wx:for='{{notices}}'>{{item.content}}</swiper-item>
+    </swiper>
+    <input name='examNum' value='{{examNumValue}}' maxlength='14' type='number' placeholder='输入你的准考证号'></input>
+    <button form-type='submit'>查询通知信息</button>
+    <text class='authorBy' bindtap='showAuthor'>——by:铁大麟角团队</text>
+  </form>
+  <image bindtap="preview" style="margin-top:-100rpx;width:150rpx;height:150rpx;" src="/image/qrcode.jpg"></image>
+  <view bindtap="about" class='bottom'>
+    <view>——关于——</view>
+  </view>
+  
+  <!-- <view class='author'>——by:小强</view> -->
+</view>

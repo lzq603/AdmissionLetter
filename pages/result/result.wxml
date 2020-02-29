@@ -1,0 +1,102 @@
+<!--pages/result/result.wxml-->
+<view>
+  <!-- 正在查询 -->
+  <view wx:if='{{!admission}}' class='tip'>正在查询……</view>
+
+  <!-- 录取通知书 -->
+  <view wx:elif='{{admission.id}}'>
+    <!-- 上半部分 -->
+    <view class='letter'>
+      <view style='text-align:center;'>
+        <image class='letter-png' src='/image/letter.png' mode='aspectFit'></image>
+      </view>
+      <!-- <view class='content'>
+        <view><text class='name'>{{admission.name}}</text>同学：</view>
+        <view><text space='nbsp' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>恭喜你已被石家庄铁道大学录取！</view>
+      </view> -->
+    </view>
+    <view class='letter'>
+      <!-- <view style='text-align:center'>
+        <image id='stdu-img' mode='aspectFit' src='/image/stdu.png'></image>
+        <view class='title'>录取通知书</view>
+      </view> -->
+      
+    </view>
+
+    <view style='height:6rpx;color:#eeeeee;'></view>
+
+    <!-- 物流信息 -->
+    <view class='logistics'>
+
+      <!-- 没有物流信息数据 -->
+      <view wx:if='{{!logistics.message}}'>
+        <view class='tip'>正在查询物流信息，请稍后……</view>
+      </view>
+
+      <!-- 成功查询到物流 -->
+      <view wx:elif='{{logistics.message == "ok"}}'>
+        <view class='serial'>姓名：<text>{{admission.name}}</text></view>
+        <view class='serial' data-num='{{logistics.nu}}' bindlongtap='copy'>单号：<text>{{logistics.nu}} (长按可复制)</text></view>
+        <!--已签收首部 -->
+        <!-- <view wx:if='{{logistics.ischeck == 0}}' class='item' style='height:150rpx;'>
+          <view class='shaft' style='background-image:url({{app.globalData.host + "image/pix.png"}})'>
+            <image class='reddot' src='/image/right.png'></image>
+          </view>
+          <view class='log-content' style='color:#ff8a00;font-size:36rpx;'>
+            <view class='status'>已签收，欢迎学弟学妹！</view>
+            <view class='time'></view>
+          </view>
+        </view> -->
+
+        <view wx:for='{{logistics.data}}' class='item'>
+          <view class='shaft' style='background-image:url({{app.globalData.host + "image/pix.png"}})'>
+            <image wx:if='{{index == 0}}' class='reddot' src='/image/reddot.png'></image>
+            <image wx:else class='dot' src='/image/greydot.png'></image>
+          </view>
+          <view wx:if='{{index == 0}}' class='log-content' style='color:#ff7800;font-size:36rpx;'>
+            <view class='status'>{{item.context}}</view>
+            <view class='time'>{{item.time}}</view>
+          </view>
+          <view wx:else class='log-content' style='color:#8a8a8a'>
+            <view class='status'>{{item.context}}</view>
+            <view class='time'>{{item.time}}</view>
+          </view>
+        </view>
+
+        <!--尾部 -->
+        <view class='item' style='height:150rpx;'>
+          <view class='shaft' style='background-image:url({{app.globalData.host + "image/pix.png"}})'>
+            <image class='reddot' src='/image/reddot.png'></image>
+          </view>
+          <view class='log-content' style='color:#8a8a8a'>
+            <view class='status'>录取通知书已发出</view>
+            <view class='time'></view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 暂时没有物流信息 -->
+      <view wx:elif='{{logistics.message != "ok"}}'>
+        <view  class='tip'>
+          <view>同学你好，你的录取通知书已经发出，但暂时还没有物流信息，请稍后再试。</view>
+          <view data-num='{{admission.mailSign}}' bindlongtap='copy'>单号:{{admission.mailSign}}</view>
+        </view>
+        <view style='text-align:center;'>
+          <image src='/image/post.jpg'></image>
+        </view>
+      </view>
+    </view>
+    <view style='background-color:#f8234a;height:60rpx;'></view>
+  </view>
+
+  <!--未查询到录取通知书 -->
+  <view wx:else>
+    <view class='tip'>
+      同学你好，暂时没有你的录取通知书信息，可能还未发出，请耐心等待
+    </view>
+    <view>
+      <image style='width:100%;' src='/image/timg.gif'></image>
+    </view>
+  </view>
+  <ad unit-id="adunit-9aa2465f2a48a1cd"></ad>
+</view>

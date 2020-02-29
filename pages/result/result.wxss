@@ -1,0 +1,113 @@
+/* pages/result/result.wxss */
+page{
+  background-color:white;
+}
+/*录取结果框架*/
+.frame{
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400rpx;
+}
+/*恭喜文字*/
+.congratulation{
+  border-radius: 20rpx;
+  /* background-color: #f8234a; */
+  color: black;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*学生姓名称呼*/
+.name{
+  text-decoration: underline;
+}
+/*EMS标志*/
+#ems{
+  position: absolute;
+  right: 50rpx;
+  bottom: 0rpx;
+  width: 230rpx;
+  height: 100rpx;
+}
+/*未查询到提示*/
+.tip{
+  background: white;
+  padding: 40rpx;
+  color: red;
+  font-size: 40rpx;
+  margin-top: 8rpx;
+}
+/*录取通知书*/
+.letter{
+  background-color: #f8234a;
+  border-radius: 20rpx;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*录取通知书*/
+.letter-png{
+  background-color: #f8234a;
+  width: 90%;
+  margin: 20rpx;
+  border: solid 20rpx #f8234a;
+  height: 400rpx;
+}
+/*通知书主内容*/
+.content{
+  border-top: solid 4rpx white;
+  padding: 40rpx;
+  color: black;
+  font-size: 48rpx;
+  font-weight: 400;
+}
+
+/*圆点*/
+.dot{
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 50rpx;
+}
+/*物流每条动态*/
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20rpx;
+  height: 230rpx;
+}
+
+.shaft{
+  width: 10%;
+  text-align: center;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.status{
+  font-size: 30rpx;
+}
+.time{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+/*物流内容*/
+.log-content{
+  width:85%;
+  border-bottom: solid 3rpx #828282;
+  padding:36rpx 0;
+}
+.reddot{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 50rpx;
+}
+.serial{
+  font-size: 32rpx;
+  margin: 20rpx 40rpx;
+  color: green;
+}

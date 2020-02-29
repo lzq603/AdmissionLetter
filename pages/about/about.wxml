@@ -1,0 +1,21 @@
+<!--pages/about/about.wxml-->
+<view class='contain'>
+  <view style='text-align:center;'>
+    <image id='logo' src='/image/logo.png'></image>
+    <view class='title'>石头查询</view>
+    <view>v1.0</view>
+  </view>
+  <view class='contact'>
+    <view class='li'>
+      <image class='ico' src='/image/github.png'></image>
+      <view>GitHub：https://github.com/lzq603</view>
+    </view>
+    <view class='li'>
+      <image class='ico' src='/image/qq.png'></image>
+      <view>个人主页：http://www.tunan.work</view>
+    </view>
+  </view>
+  <view class='copyright'>
+    Copyright©2019
+  </view>
+</view>
